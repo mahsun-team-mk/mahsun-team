@@ -22,7 +22,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #012970; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #4154f1; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: hsl(263, 84%, 42%); /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -86,6 +86,10 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
+
+
+
+
 
 /* PHP Email Form Messages
 ------------------------------*/
@@ -167,6 +171,7 @@ h6 {
 }
 
 .header .btn-getstarted,
+/* .navmenu ul li a:hover, */
 .header .btn-getstarted:focus {
   color: var(--contrast-color);
   background: var(--accent-color);
@@ -177,6 +182,34 @@ h6 {
   transition: 0.3s;
   font-weight: 500;
 }
+
+.navmenu ul li a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #000; /* Adjust the color as needed */
+  padding: 10px 15px; /* Adjust the padding as needed */
+}
+
+.navmenu ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px; /* Thickness of the underline */
+  width: 0;
+  background-color: #000; /* Adjust the underline color */
+  transition: width 0.3s ease;
+}
+
+.navmenu ul li a:hover::after {
+  width: 100%;
+}
+
+.navmenu ul li a:hover {
+  text-decoration: none; /* Disable default underline */
+}
+
 
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
@@ -231,6 +264,8 @@ h6 {
     display: flex;
     list-style: none;
     align-items: center;
+    /* font-weight: bold; */
+    /* font-size: larger; */
   }
 
   .navmenu li {
@@ -241,9 +276,9 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-color);
     padding: 18px 12px;
-    font-size: 15px;
+    font-size: 20px;
     font-family: var(--nav-font);
-    font-weight: 500;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -837,8 +872,20 @@ section,
   padding: 80px 0 60px 0;
   display: flex;
   align-items: center;
-  background: url(../img/hero-bg.png) top center no-repeat;
+  background: none; /* Remove direct background image here */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/background.jpg) top center no-repeat;
   background-size: cover;
+  opacity: 0.1; /* Set your desired opacity */
+  z-index: -2; /* Place it behind the .hero content */
 }
 
 .hero h1 {
