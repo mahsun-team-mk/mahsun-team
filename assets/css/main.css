@@ -21,8 +21,12 @@
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #012970; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: hsl(263, 84%, 42%); /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --heading-color: #3d1e5f; /* Color for headings, subheadings and title throughout the website */
+  /* --accent-color: #3d1e59;  */
+  /* --accent-color: #4a2268;  */
+  --accent-color: #64317d; 
+  /* --accent-color: #673381;  */
+  /* --accent-color: #3d1e5f;  */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -30,7 +34,7 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #012970;  /* The default color of the main navmenu links */
-  --nav-hover-color: #4154f1; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #3d1e59; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -42,6 +46,7 @@
 .light-background {
   --background-color: #f9f9f9;
   --surface-color: #ffffff;
+  font-family: Nunito;
 }
 
 .dark-background {
@@ -882,11 +887,86 @@ section,
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../img/background.jpg) top center no-repeat;
+  background: url(../img/homebg.png) top center no-repeat;
   background-size: cover;
   opacity: 0.3; /* Set your desired opacity */
   z-index: -1; /* Place it behind the .hero content */
 }
+
+
+.faq {
+  width: 100%;
+  min-height: 60vh;
+  position: relative;
+  padding: 80px 0 60px 0;
+  /* display: flex; */
+  /* align-items: center; */
+  background: none; /* Remove direct background image here */
+}
+
+.faq::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/homebg.png) top center no-repeat;
+  background-size: cover;
+  opacity: 0.3; /* Set your desired opacity */
+  z-index: -1; /* Place it behind the .hero content */
+}
+
+
+.testimonials {
+  width: 100%;
+  min-height: 60vh;
+  position: relative;
+  padding: 80px 0 60px 0;
+  /* display: flex; */
+  /* align-items: center; */
+  background: none; /* Remove direct background image here */
+}
+
+.testimonials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/homebg.png) top center no-repeat;
+  background-size: cover;
+  opacity: 0.3; /* Set your desired opacity */
+  z-index: -1; /* Place it behind the .hero content */
+}
+
+
+
+.clients {
+  width: 100%;
+  /* min-height: 60vh; */
+  position: relative;
+  padding: 80px 0 60px 0;
+  /* display: flex; */
+  /* align-items: center; */
+  background: none; /* Remove direct background image here */
+}
+
+.clients::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/homebg.png) top center no-repeat;
+  background-size: cover;
+  opacity: 0.3; /* Set your desired opacity */
+  z-index: -1; /* Place it behind the .hero content */
+}
+
+
 
 .hero h1 {
   margin: 0;
@@ -1039,6 +1119,77 @@ section,
 /*--------------------------------------------------------------
 # Values Section
 --------------------------------------------------------------*/
+
+#values {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 0 60px 0;
+  /* display: flex; */
+  /* align-items: center; */
+  background: none; /* Remove direct background image here */
+}
+
+#values::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/valuebg.png) top center no-repeat;
+  background-size: cover;
+  opacity: 0.3; /* Set your desired opacity */
+  z-index: -1; /* Place it behind the .hero content */
+}
+
+
+#features {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 0 60px 0;
+  /* display: flex; */
+  /* align-items: center; */
+  background: none; /* Remove direct background image here */
+}
+
+#features::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/featuresbg.png) top center no-repeat;
+  background-size: cover;
+  opacity: 0.3; /* Set your desired opacity */
+  z-index: -1; /* Place it behind the .hero content */
+}
+
+#services {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 0 60px 0;
+  /* display: flex; */
+  /* align-items: center; */
+  background: none; /* Remove direct background image here */
+}
+
+#services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/featuresbg.png) top center no-repeat;
+  background-size: cover;
+  opacity: 0.3; /* Set your desired opacity */
+  z-index: -1; /* Place it behind the .hero content */
+}
+
 .values .card {
   background-color: var(--surface-color);
   color: var(--default-color);
@@ -1612,6 +1763,20 @@ section,
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
+/* .client-item {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1);
+  box-sizing: content-box;
+  padding: 30px;
+  margin: 40px 30px;
+  min-height: 0px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.3s;
+} */
+
+
 .testimonials .testimonial-item {
   background-color: var(--surface-color);
   box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1);
@@ -1802,7 +1967,7 @@ section,
 --------------------------------------------------------------*/
 .clients .swiper-slide img {
   transition: 0.3s;
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
 
 .clients .swiper-slide img:hover {
